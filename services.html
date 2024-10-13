@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <title>Services - Igloo</title>
+    <style>
+        .hehe {
+            background-color: rgb(97, 90, 90);
+        }
+    </style>
 </head>
 
-<body>
+<body class="hehe">
     <div class="topbar">
         <div class="topbar-left">
             <i class="logo fas fa-igloo"></i>
@@ -22,27 +27,34 @@
             </div>
         </div>
         <div class="topbar-right">
-            <div class="line-container">
+            <div class="hamburger" id="hamburger">
                 <div class="line line-1"></div>
                 <div class="line line-2"></div>
                 <div class="line line-3"></div>
             </div>
         </div>
+        
     </div>
+
     <div class="menu">
         <div class="menu-center">
-            <a href="index.html" class="menu-item"><i class="fas fa-home"></i><span>Home</span></a>
+            
             <a href="about.html" class="menu-item"><i class="fas fa-info-circle"></i><span>About Us</span></a>
             <a href="contact.html" class="menu-item"><i class="fas fa-envelope"></i><span>Contact Us</span></a>
             <a href="services.html" class="menu-item"><i class="fas fa-cogs"></i><span>Services</span></a>
             <a href="highlight.html" class="menu-item"><i class="fas fa-star"></i><span>Highlight</span></a>
-            
+            <a href="index.html" class="menu-item"><i class="fa-solid fa-user"></i><span>Log out</span></a>
         </div>
     </div>
 
     <div class="content">
         <h2>Our Services</h2>
-        <p>At Igloo, we offer a variety of services to meet your needs. Our dedicated team is here to provide quality solutions tailored for you.</p>
+        <p>At Igloo, we offer a variety of services tailored to your needs. Our dedicated team is here to provide quality solutions, especially in the world of sports!</p>
+        
+        <div class="topbar-search">
+            <i class="search-icon fas fa-search"></i>
+            <input type="text" id="search-input" placeholder="Search services..." onkeyup="searchFunction()">
+        </div>
         
         <div class="services-list">
             <div class="service-item">
@@ -65,8 +77,68 @@
                 <h3>Development</h3>
                 <p>Full-stack development to bring your ideas to life.</p>
             </div>
+            <div class="service-item">
+                <i class="fas fa-skiing"></i>
+                <h3>Ski Rentals</h3>
+                <p>Rent top-quality ski equipment for a thrilling experience on the slopes.</p>
+            </div>
+            <div class="service-item">
+                <i class="fa-solid fa-person-skating"></i>
+                <h3>Ice Skating</h3>
+                <p>Join us for ice skating sessions at our beautiful rinks!</p>
+            </div>            
+            <div class="service-item">
+                <i class="fas fa-hockey-puck"></i>
+                <h3>Ice Hockey League</h3>
+                <p>Participate in our local ice hockey league for all skill levels.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-snowboarding"></i>
+                <h3>Snowboarding Lessons</h3>
+                <p>Learn to snowboard with our professional instructors!</p>
+            </div>
+            <div class="service-item">
+                <i class="fa-solid fa-person-snowmobiling"></i>
+                <h3>Snowmobiling</h3>
+                <p>Experience thrilling snowmobiling adventures on our trails!</p>
+            </div>
+            <div class="service-item">
+                <i class="fa-solid fa-person-sledding"></i>
+                <h3>Sledding</h3>
+                <p>Enjoy fun-filled sledding days with family and friends!</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-skiing-nordic"></i>
+                <h3>Skiing - Nordic</h3>
+                <p>Explore beautiful landscapes with our Nordic skiing tours.</p>
+            </div>
+            <div class="service-item">
+                <i class="fa-solid fa-person-ski-jumping"></i>
+                <h3>Ski Jumping</h3>
+                <p>Test your skills in our exciting ski jumping sessions!</p>
+            </div>
+            <div class="service-item">
+                <i class="fa-solid fa-person-ski-lift"></i>
+                <h3>Ski Lift</h3>
+                <p>Convenient ski lifts to access our best slopes!</p>
+            </div>
+        </div>
+    
+        <div class="warning">
+            <h3>Warning!</h3>
+            <p>Caution: Frostbite and other harms may occur. Please ensure to follow safety guidelines and be aware of weather conditions.</p>
         </div>
     </div>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <i class="logo fas fa-igloo"></i>
+            <span>Igloo</span>
+        </div>
+        <div class="footer-logo-name">
+            <span>&copy; 2024 Igloo. All Rights Reserved.</span>
+        </div>
+    </footer>
 
     <script src="app.js"></script>
 </body>
