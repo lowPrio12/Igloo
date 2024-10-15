@@ -31,20 +31,17 @@ searchInput.addEventListener('input', function() {
         });
     }, 300); // Delay in milliseconds
 });
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the form from submitting normally
 
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+document.addEventListener('DOMContentLoaded', () => {
+    const snowflakeCount = 50;
+    const body = document.body;
 
-    // Simulated login process
-    if (username === "admin" && password === "password123") {
-        document.getElementById('loginMessage').innerText = "Login successful!";
-        document.getElementById('loginMessage').style.color = "green";
-        // Redirect or perform further actions here
-    } else {
-        document.getElementById('loginMessage').innerText = "Invalid username or password.";
-        document.getElementById('loginMessage').style.color = "red";
+    for (let i = 0; i < snowflakeCount; i++) {
+        const snowflake = document.createElement('div');
+        snowflake.className = 'snowflake';
+        snowflake.style.left = Math.random() * 100 + 'vw';
+        snowflake.style.animationDuration = Math.random() * 3 + 2 + 's'; // Random duration
+        body.appendChild(snowflake);
     }
 });
 
