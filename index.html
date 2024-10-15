@@ -5,55 +5,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <title>Igloo</title>
+    <style>
+        .header-bg {
+            background-color: rgb(97, 90, 90);
+        }
+    </style>
 </head>
 
-<body>
+<body class="header-bg">
     <div class="topbar">
         <div class="topbar-left">
             <i class="logo fas fa-igloo"></i>
             <h1>Igloo</h1>
         </div>
-        <div class="topbar-center">
-            <div class="topbar-search">
-                <i class="search-icon fas fa-search"></i>
-                <input type="text" placeholder="Search...">
-            </div>
-        </div>
-        <div class="topbar-right">
-            <div class="line-container">
-                <div class="line line-1"></div>
-                <div class="line line-2"></div>
-                <div class="line line-3"></div>
-            </div>
-        </div>
+        
+        
     </div>
+
     <div class="menu">
         <div class="menu-center">
-            <a href="index.html" class="menu-item"><i class="fas fa-home"></i><span>Home</span></a>
+            
             <a href="about.html" class="menu-item"><i class="fas fa-info-circle"></i><span>About Us</span></a>
             <a href="contact.html" class="menu-item"><i class="fas fa-envelope"></i><span>Contact Us</span></a>
             <a href="services.html" class="menu-item"><i class="fas fa-cogs"></i><span>Services</span></a>
             <a href="highlight.html" class="menu-item"><i class="fas fa-star"></i><span>Highlight</span></a>
+            <a href="index.html" class="menu-item"><i class="fa-solid fa-user"></i><span>Log out</span></a>
         </div>
     </div>
 
     <div class="content">
         <h2>Welcome to Igloo</h2>
-        <div class="highlight">Your one-stop solution for all your needs!</div>
+        <p>Your one-stop solution for all your needs!</p>
+
+        <div class="highlight">
+            <h3>Discover Our Services</h3>
+            <p>Explore the unique offerings that set us apart.</p>
+        </div>
+
+        <div class="login-form">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <div id="loginMessage"></div>
+        </div>
+        <a href="signup.html" style="color: #007BFF; text-decoration: none; transition: color 0.3s;">Don't have an account? Sign Up here!</a>
     </div>
 
-    <div class="login-form">
-        <h2>Login</h2>
-        <form>
-            <input type="text" placeholder="Username" required>
-            <input type="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <i class="logo fas fa-igloo"></i>
+            <span>Igloo</span>
+        </div>
+        <div class="footer-logo-name">
+            <span>&copy; 2024 Igloo. All Rights Reserved.</span>
+        </div>
+    </footer>
 
-    <script src="app.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const storedUsername = localStorage.getItem('username');
+            const storedPassword = localStorage.getItem('password');
+           
+            if (username === storedUsername && password === storedPassword) {
+                alert("Login successful!");
+                window.location.href = 'services.html';
+            } else {
+                document.getElementById('loginMessage').textContent = 'Invalid username or password. Please try again.';
+            }
+        });
+    </script>
 </body>
 
 </html>

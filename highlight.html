@@ -1,55 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-    <title>Highlight - Igloo</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+        <title>Highlight - Igloo</title>
+    </head>
 
-<body>
-    <div class="topbar">
-        <div class="topbar-left">
-            <i class="logo fas fa-igloo"></i>
-            <h1>Igloo</h1>
-        </div>
-        <div class="topbar-center">
-            <div class="topbar-search">
-                <i class="search-icon fas fa-search"></i>
-                <input type="text" placeholder="Search...">
+    <body class="hehe">
+        <div class="topbar">
+            <div class="topbar-left">
+                <i class="logo fas fa-igloo"></i>
+                <h1>Igloo</h1>
             </div>
-        </div>
-        <div class="topbar-right">
-            <div class="line-container">
-                <div class="line line-1"></div>
-                <div class="line line-2"></div>
-                <div class="line line-3"></div>
+            <div class="topbar-center">
+                <div class="topbar-search">
+                    <i class="search-icon fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
             </div>
+            <div class="topbar-right">
+                <div class="hamburger" id="hamburger">
+                    <div class="line line-1"></div>
+                    <div class="line line-2"></div>
+                    <div class="line line-3"></div>
+                </div>
+            </div>
+            
         </div>
-    </div>
-    <div class="menu">
-        <div class="menu-center">
-            <a href="index.html" class="menu-item"><i class="fas fa-home"></i><span>Home</span></a>
-            <a href="about.html" class="menu-item"><i class="fas fa-info-circle"></i><span>About Us</span></a>
-            <a href="contact.html" class="menu-item"><i class="fas fa-envelope"></i><span>Contact Us</span></a>
-            <a href="services.html" class="menu-item"><i class="fas fa-cogs"></i><span>Services</span></a>
-            <a href="highlight.html" class="menu-item"><i class="fas fa-star"></i><span>Highlight</span></a>
-        </div>
-    </div>
 
-    <div class="content">
-        <h2>Highlight</h2>
-        <p>Discover the unique aspects of our offerings. Here's a glimpse into our services:</p>
-        
-        <img src="https://img.freepik.com/free-vector/eskimo-cold-house-from-ice-blocks-antarctica-dome-house-winter-weather-north-house-from-cold_1284-51517.jpg?semt=ais_hybrid" 
-             alt="Eskimo House" class="highlight-image">
+        <nav class="menu">
+            <div class="menu-center">
+                <a href="about.html" class="menu-item"><i class="fas fa-info-circle"></i><span>About Us</span></a>
+                <a href="contact.html" class="menu-item"><i class="fas fa-envelope"></i><span>Contact Us</span></a>
+                <a href="services.html" class="menu-item"><i class="fas fa-cogs"></i><span>Services</span></a>
+                <a href="highlight.html" class="menu-item"><i class="fas fa-star"></i><span>Highlight</span></a>
+                <a href="index.html" class="menu-item"><i class="fa-solid fa-user"></i><span>Log out</span></a>
+                
 
-        <p>This image represents the essence of our unique services, inspired by the resilience and creativity of life in extreme conditions.</p>
-    </div>
+            </div>
+        </nav>
 
-    <script src="app.js"></script>
-</body>
+        <main class="content">
+            <h2>Highlights</h2>
+            <p>Check out our amazing achievements and the work we are most proud of!</p>
+            <img src="highlight-image.jpg" alt="Highlight Image" class="highlight-image">
+        </main>
 
-</html>
+        <footer class="footer">
+            <div class="footer-content">
+                <i class="logo fas fa-igloo"></i>
+                <span>Igloo</span>
+            </div>
+            <div class="footer-logo-name">
+                <span>&copy; 2024 Igloo. All Rights Reserved.</span>
+            </div>
+        </footer>
+
+        <script src="app.js"></script>
+    </body>
+
+    </html>
